@@ -1,7 +1,9 @@
+# $Ragnarok: config.mk,v 1.1 2023/10/03 20:16:23 lecorbeau Exp $
+
 # rt version
 VERSION = 0.1
 
-# Customize below to fit your system
+include ${TOPDIR}/usr/share/X11/mk/xprogs.mk
 
 # paths
 PREFIX = /usr
@@ -21,9 +23,9 @@ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender \
        `$(PKG_CONFIG) --libs freetype2`
 
 # flags
-STCPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600
-STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS) $(CFLAGS)
-STLDFLAGS = $(LIBS) $(LDFLAGS)
+STCPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600 ${HARDENING_CPPFLAGS}
+STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS) $(CFLAGS) ${HARDENING_CFLAGS}
+STLDFLAGS = $(LIBS) $(LDFLAGS) ${HARDENING_LDFLAGS}
 
 # OpenBSD:
 #CPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600 -D_BSD_SOURCE
