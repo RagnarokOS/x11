@@ -1,4 +1,4 @@
-# $Ragnarok: config.mk,v 1.1 2023/10/03 20:16:23 lecorbeau Exp $
+# $Ragnarok: config.mk,v 1.2 2023/10/03 23:30:44 lecorbeau Exp $
 
 # rt version
 VERSION = 0.1
@@ -24,7 +24,7 @@ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender \
 
 # flags
 STCPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600 ${HARDENING_CPPFLAGS}
-STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS) $(CFLAGS) ${HARDENING_CFLAGS}
+STCFLAGS = $(INCS) ${O_FLAG} $(STCPPFLAGS) $(CPPFLAGS) ${HARDENING_CFLAGS}
 STLDFLAGS = $(LIBS) $(LDFLAGS) ${HARDENING_LDFLAGS}
 
 # OpenBSD:

@@ -1,4 +1,5 @@
 !! Example .Xresources config for rt
+!! $Ragnarok: rt.xresources,v 1.1 2023/10/03 20:18:29 lecorbeau Exp $
 !!
 rt.font:	Monospace-12
 rt.alpha:	0.8
