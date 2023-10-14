@@ -1,4 +1,4 @@
-/* $Id: config.h,v 1.1 2023/10/14 17:14:57 lecorbeau Exp $
+/* $Ragnarok: config.h,v 1.2 2023/10/14 17:19:14 lecorbeau Exp $
  *
  * See LICENSE file for copyright and license details.
  */
@@ -10,7 +10,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int barsize   = 6;	/* Size of Raven's bar */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=11" };
+static const char *fonts[]          = { "DejaVu Sans Mono:size=11" };
 static const char normbgcolor[]     = "#222222";
 static const char normbordercolor[] = "#444444";
 static const char normfgcolor[]     = "#bbbbbb";
