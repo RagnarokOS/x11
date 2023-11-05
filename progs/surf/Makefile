@@ -64,6 +64,9 @@ install: all
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < surf.1 > $(DESTDIR)$(MANPREFIX)/man1/surf.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/surf.1
+	mkdir -p ${DESTDIR}/etc/apparmor.d
+	cp -f usr.bin.surf ${DESTDIR}/etc/apparmor.d/
+	chmod 644 ${DESTDIR}/etc/apparmor.d/usr.bin.surf
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/surf
