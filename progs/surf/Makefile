@@ -64,9 +64,11 @@ install: all
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < surf.1 > $(DESTDIR)$(MANPREFIX)/man1/surf.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/surf.1
-	mkdir -p ${DESTDIR}/etc/apparmor.d
+	mkdir -p ${DESTDIR}/etc/apparmor.d/abstractions
 	cp -f usr.bin.surf ${DESTDIR}/etc/apparmor.d/
 	chmod 644 ${DESTDIR}/etc/apparmor.d/usr.bin.surf
+	cp -f surf-gstreamer ${DESTDIR}/etc/apparmor.d/abstractions
+	chmod 644 ${DESTDIR}/etc/apparmor.d/abstractions/surf-gstreamer
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/surf
