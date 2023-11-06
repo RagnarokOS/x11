@@ -69,6 +69,8 @@ install: all
 	chmod 644 ${DESTDIR}/etc/apparmor.d/usr.bin.surf
 	cp -f surf-gstreamer ${DESTDIR}/etc/apparmor.d/abstractions
 	chmod 644 ${DESTDIR}/etc/apparmor.d/abstractions/surf-gstreamer
+	touch ${DESTDIR}/etc/apparmor.d/local/usr.bin.surf
+	chmod 644 ${DESTDIR}/etc/apparmor.d/local/usr.bin.surf
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/surf
