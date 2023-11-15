@@ -1,9 +1,9 @@
 # Makefile to build the x11 set.
-# $Id: Makefile,v 1.2 2023/11/05 19:54:03 lecorbeau Exp $
+# $Id: Makefile,v 1.3 2023/11/15 19:21:36 lecorbeau Exp $
 
 MAKE	= make -C
 
-SUBDIRS = dwm rt dmenu surf wmutils-core
+SUBDIRS = cwm dwm rt dmenu surf wmutils-core
 
 all:
 	for _dir in ${SUBDIRS}; do \
