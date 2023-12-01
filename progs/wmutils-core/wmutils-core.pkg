@@ -1,0 +1,41 @@
+Package: wmutils-core
+Version: 999+ragnarok01
+Maintainer: Ian LeCorbeau <I-LeCorbeau@protonmail.com>
+Architecture: amd64
+Section: x11
+Files: pfw /usr/bin/
+ pdw /usr/bin/
+ lsw /usr/bin/
+ mapw /usr/bin/
+ killw /usr/bin/
+ wattr /usr/bin/
+ wtp /usr/bin/
+ wmv /usr/bin/
+ chwso /usr/bin/
+ wtf /usr/bin/
+ wrs /usr/bin/
+ chwb /usr/bin/
+ ignw /usr/bin/
+ wmp /usr/bin/
+ slw /usr/bin/
+ atomx /usr/bin/
+ man/pfw.1 /usr/share/man/man1/
+ man/pdw.1 /usr/share/man/man1/
+ man/lsw.1 /usr/share/man/man1/
+ man/mapw.1 /usr/share/man/man1/
+ man/killw.1 /usr/share/man/man1/
+ man/wattr.1 /usr/share/man/man1/
+ man/wtp.1 /usr/share/man/man1/
+ man/wmv.1 /usr/share/man/man1/
+ man/chwso.1 /usr/share/man/man1/
+ man/wtf.1 /usr/share/man/man1/
+ man/wrs.1 /usr/share/man/man1/
+ man/chwb.1 /usr/share/man/man1/
+ man/ignw.1 /usr/share/man/man1/
+ man/wmp.1 /usr/share/man/man1/
+ man/slw.1 /usr/share/man/man1/
+ man/atomx.1 /usr/share/man/man1/
+Readme: README.md
+Copyright: LICENSE
+Description: wmutils-core
+ Window management utilities
