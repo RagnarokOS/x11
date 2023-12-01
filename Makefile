@@ -1,5 +1,5 @@
 # Global Makefile for x11
-# $Ragnarok: Makefile,v 1.1 2023/11/17 16:46:04 lecorbeau Exp $
+# $Ragnarok: Makefile,v 1.2 2023/12/01 18:54:56 lecorbeau Exp $
 
 MAKE	= make -C
 SUBDIRS	= progs usr
@@ -11,3 +11,6 @@ install:
 	for _dir in ${SUBDIRS}; do \
 		${MAKE} $$_dir install; \
 		done
+
+dist:
+	${MAKE} progs dist
