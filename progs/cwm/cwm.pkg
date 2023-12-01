@@ -6,7 +6,7 @@ Section: x11
 Provides: x-window-manager
 Files: cwm /usr/bin/
  cwm.1 /usr/share/man/man1/
- cwm.5 /usr/share/man/man5/
+ cwmrc.5 /usr/share/man/man5/
 Readme: README.md
 Copyright: pkg.license
 Description: Calm Window Manager

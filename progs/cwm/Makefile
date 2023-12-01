@@ -1,5 +1,5 @@
 # Makefile for cwm
-# $Ragnarok: Makefile,v 1.3 2023/12/01 19:08:25 lecorbeau Exp $
+# $Ragnarok: Makefile,v 1.4 2023/12/01 21:00:00 lecorbeau Exp $
 
 include ${TOPDIR}/usr/share/X11/mk/xprogs.mk
 
@@ -20,7 +20,7 @@ OBJS=		calmwm.o screen.o xmalloc.o client.o menu.o \
 CPPFLAGS+=	-I${X11BASE}/include -I${X11BASE}/include/freetype2 \
 		${HARDENING_CPPFLAGS}
 
-CFLAGS?=	-Wall -g ${O_FLAG} -D_GNU_SOURCE ${CFLAGS_LTO} ${HARDENING_CFLAGS}
+CFLAGS?=	-Wall ${O_FLAG} -D_GNU_SOURCE ${CFLAGS_LTO} ${HARDENING_CFLAGS}
 
 LDFLAGS+=	${LDFLAGS_LTO} ${HARDENING_LDFLAGS} -L${X11BASE}/lib -lXft -lfreetype \
 		-lX11-xcb -lX11 -lxcb -lXau -lXdmcp -lfontconfig -lexpat -lfreetype -lz \
