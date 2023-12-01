@@ -53,6 +53,9 @@ install: all
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/dmenu.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/stest.1
 
+deb: all
+	/usr/bin/equivs-build dmenu.pkg
+
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dmenu\
 		$(DESTDIR)$(PREFIX)/bin/dmenu_path\

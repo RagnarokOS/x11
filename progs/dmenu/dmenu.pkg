@@ -1,0 +1,15 @@
+Package: dmenu
+Version: 999+ragnarok01
+Maintainer: Ian LeCorbeau <I-LeCorbeau@protonmail.com>
+Architecture: amd64
+Section: x11
+Files: dmenu /usr/bin/
+ dmenu_path /usr/bin/
+ dmenu_run /usr/bin/
+ stest /usr/bin/
+ dmenu.1 /usr/share/man/man1/
+ stest.1 /usr/share/man/man1/
+Readme: README.md
+Copyright: LICENSE
+Description: dmenu
+ This is Ragnarok's fork of dmenu.
