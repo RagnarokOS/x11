@@ -1,5 +1,5 @@
 # Compile time options used by programs in Ragnarok's x11 set.
-# $Ragnarok: xprogs.mk,v 1.1 2023/11/05 19:14:03 lecorbeau Exp i $
+# $Ragnarok: xprogs.mk,v 1.2 2023/12/01 16:31:13 lecorbeau Exp $
 
 # Flags to enable ThinLTO
 CFLAGS_LTO		= -flto=thin
@@ -13,8 +13,8 @@ CFLAGS_CFI		= ${CFLAGS_LTO} -fvisibility=hidden -fsanitize=cfi
 
 # Hardening flags
 HARDENING_CPPFLAGS	= -D_FORTIFY_SOURCE=2
-HARDENING_CFLAGS 	= -Wformat -Wformat-security -fstack-clash-protection \
+HARDENING_CFLAGS 	= -Wformat -Wformat-security ${CFLAGS_LTO} -fstack-clash-protection \
 			  -fstack-protector-strong --param=ssp-buffer-size=4 -fcf-protection
-HARDENING_LDFLAGS	= -Wl,-z,relro,-z,now -Wl,-zdefs
+HARDENING_LDFLAGS	= ${LDFLAGS_LTO} -Wl,-z,relro,-z,now -Wl,--as-needed
 
 
