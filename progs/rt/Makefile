@@ -1,5 +1,6 @@
 # rt - simple terminal
 # See LICENSE file for copyright and license details.
+# $Ragnarok: Makefile,v 1.1 2023/12/01 16:23:18 lecorbeau Exp $
 .POSIX:
 
 include config.mk
@@ -52,6 +53,9 @@ install: rt
 	chmod 644 $(DESTDIR)$(PREFIX)/share/doc/rt-term/rt.xresources
 	tic -sx rt.info
 	@echo Please see the README.md file regarding the terminfo entry of rt.
+
+deb: rt
+	/usr/bin/equivs-build rt.pkg
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/rt
