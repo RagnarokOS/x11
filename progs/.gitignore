@@ -1,1 +1,4 @@
 RCS/
+**/*.deb
+**/*.buildinfo
+**/*.changes
