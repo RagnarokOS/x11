@@ -1,4 +1,4 @@
-# $Ragnarok: config.mk,v 1.3 2023/12/01 18:30:42 lecorbeau Exp $
+# $Ragnarok: config.mk,v 1.4 2023/12/01 19:34:25 lecorbeau Exp $
 
 # rt version
 VERSION = 0.1
@@ -35,4 +35,4 @@ STLDFLAGS = $(LIBS) ${LDFLAGS_LTO} $(LDFLAGS) ${HARDENING_LDFLAGS}
 #MANPREFIX = ${PREFIX}/man
 
 # compiler and linker
-# CC = c99
+CC = clang
