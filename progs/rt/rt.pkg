@@ -2,6 +2,7 @@ Package: rt
 Version: 0.1+ragnarok01
 Maintainer: Ian LeCorbeau <I-LeCorbeau@protonmail.com>
 Architecture: amd64
+Section: x11
 Depends: libc6, libfontconfig1, libx11-6, libxft2, ncurses-term
 Provides: x-terminal-emulator
 Files: rt /usr/bin/

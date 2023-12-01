@@ -2,6 +2,7 @@ Package: dwm
 Version: 999+ragnarok01
 Maintainer: Ian LeCorbeau <I-LeCorbeau@protonmail.com>
 Architecture: amd64
+Section: x11
 Depends: libc6, libfontconfig1, libx11-6, libxft2, libxinerama1
 Provides: x-window-manager
 Files: dwm /usr/bin/
