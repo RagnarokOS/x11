@@ -45,6 +45,9 @@ install: $(BIN)
 	cp -f $(BIN) $(DESTDIR)$(PREFIX)/bin/
 	cd man; $(MAKE) install
 
+deb: all
+	/usr/bin/equivs-build wmutils-core.pkg
+
 uninstall:
 	@echo "uninstalling binaries"
 	@for util in $(BIN); do \
