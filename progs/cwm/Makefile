@@ -1,5 +1,5 @@
 # Makefile for cwm
-# $Ragnarok: Makefile,v 1.5 2023/12/02 19:06:22 lecorbeau Exp $
+# $Ragnarok: Makefile,v 1.6 2023/12/02 19:07:47 lecorbeau Exp $
 
 include ${TOPDIR}/usr/share/X11/mk/xprogs.mk
 
@@ -45,7 +45,7 @@ install: ${PROG}
 	install -m 644 cwm.1 ${DESTDIR}${MANPREFIX}/man1
 	install -m 644 cwmrc.5 ${DESTDIR}${MANPREFIX}/man5
 
-deb:
+deb: all
 	/usr/bin/equivs-build cwm.pkg
 
 .PRECIOUS: parse.c
